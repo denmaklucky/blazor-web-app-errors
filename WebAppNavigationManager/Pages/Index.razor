@@ -1,0 +1,15 @@
+﻿@page "/"
+@attribute [RenderModeServer]
+
+@inject NavigationManager NavigationManager
+
+<PageTitle>Home</PageTitle>
+
+<button class="btn btn-primary" @onclick="GoToWeather">Go the weather</button>
+
+@code{
+    private void GoToWeather()
+    {
+        NavigationManager.NavigateTo("weather");
+    }
+}
